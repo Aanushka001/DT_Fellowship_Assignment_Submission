@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/index.css">
+  <title>Nudge Creation</title>
+</head>
+<body>
+  <h2>Nudge Creation Page</h2>
+  <form id="nudgeForm" action="http://localhost:3000/api/v3/app/submit" method="POST" enctype="multipart/form-data">
+    <label for="type">Type of event:</label>
+    <input type="text" name="type" id="type" value="event" readonly required />
+    
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Enter name" required />
+    
+    <label for="tagline">Tagline:</label>
+    <input type="text" name="tagline" id="tagline" placeholder="Enter tagline" required />
+    
+    <label for="schedule-date">Scheduled on (Date):</label>
+    <input type="date" name="schedule-date" id="schedule-date" required />
+    
+    <label for="schedule-time">Scheduled on (Time):</label>
+    <input type="time" name="schedule-time" id="schedule-time" required />
+    
+    <label for="image">Choose Image:</label>
+    <input type="file" name="image" id="image" required />
+    
+    <label for="description">Description of the nudge:</label>
+    <textarea name="description" id="description" placeholder="Enter description" required></textarea>
+    
+    <label for="category">Category:</label>
+    <input type="text" name="category" id="category" placeholder="Enter event category" required />
+    
+    <label for="sub_category">Sub-category:</label>
+    <input type="text" name="sub_category" id="sub_category" placeholder="Enter event sub-category" required />
+    
+    <label for="rigor_rank">Rigor rank:</label>
+    <input type="number" name="rigor_rank" id="rigor_rank" placeholder="Enter rigor rank (1-10)" required />
+    
+    <label for="attendees">Attendees (user IDs):</label>
+    <textarea name="attendees" id="attendees" placeholder="Enter comma-separated user IDs" required></textarea>
+    
+    <button type="button" class="preview-btn">Preview</button>
+    <button type="submit" class="publish-btn">Publish Now</button>
+  </form>
+  
+  <script src="index.js"></script>
+</body>
+</html>
